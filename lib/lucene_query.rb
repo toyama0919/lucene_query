@@ -1,7 +1,7 @@
 class LuceneQuery
   ## Syntax Nodes
   ::String.class_eval do
-    def to_lucene; "'#{escape_lucene.downcase_ending_keywords}'" end
+    def to_lucene; escape_lucene.downcase_ending_keywords end
     
     def parens
       if self =~ /^\s*$/
